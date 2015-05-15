@@ -1,8 +1,6 @@
 # ValidSyntax
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/valid_syntax`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem checks if a string containing ruby code has any syntax errors. If this is the case, the syntax errors will be stored to be later accessed.
 
 ## Installation
 
@@ -21,8 +19,17 @@ Or install it yourself as:
     $ gem install valid_syntax
 
 ## Usage
+```
+some_valid_code = "def sum; 2+3; end"
+some_invalid_code = "defs sum; 2+3; end"
 
-TODO: Write usage instructions here
+some_valid_code.has_valid_syntax # true
+some_invalid_code.has_valid_syntax # false
+
+some_invalid_code.syntax_errors # will return a string containing the syntax errors
+
+```
+
 
 ## Development
 
