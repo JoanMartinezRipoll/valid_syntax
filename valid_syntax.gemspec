@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'valid_syntax/version'
 
 Gem::Specification.new do |spec|
-  s.required_ruby_version = ">= #{Suspenders::RUBY_VERSION}"
+  spec.required_ruby_version = ">= 2.0"
   spec.name          = "valid_syntax"
   spec.version       = ValidSyntax::VERSION
   spec.authors       = ["Joan"]
