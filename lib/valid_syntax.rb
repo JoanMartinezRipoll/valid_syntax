@@ -6,7 +6,7 @@ module ValidSyntax
 
     attr_accessor :syntax_errors
 
-    def is_valid_syntax
+    def has_valid_syntax
       catch(:x) do
         eval("throw :x
           "+ "#{self}" )
